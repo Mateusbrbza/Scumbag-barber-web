@@ -1,11 +1,22 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import "./login.css";
 import sbIMG from "../../assets/logo.png";
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const loggedIn = useContext(true);
+
+function loginConfirmed() {
+    if (loggedIn) {
+        console.log('validado')
+    } else {
+        console.log('senha incorreta')
+    }
+}
 
   return (
     <div className="container">
@@ -37,9 +48,11 @@ function Login() {
               />
               <span className="focus-input" data-placeholder="Password"></span>
             </div>
-
+            
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <Link className="login-form-btn" to='/home'>
+              <button className="login-form-btn" onClick={loginConfirmed}>Login</button>
+              </Link>
             </div>
           </form>
         </div>
