@@ -35,8 +35,8 @@ const buttonMessages = {
 const myEvents = [{ 
   start: new Date(), 
   end: new Date(), 
-  title: "evento especial" }
-];
+  title: "evento especial" 
+}];
 
 function CalendarView() {
   const [date, setDate] = useState(new Date());
