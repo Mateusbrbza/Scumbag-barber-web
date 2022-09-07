@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconName, AiFillHome, AiFillEdit } from "react-icons/ai";
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
@@ -15,15 +16,15 @@ import { GrLocation } from 'react-icons/gr';
 
 export const links = [
   {
-    title: 'Home',
+    title: 'Visualização',
     links: [
       {
         name: 'Dashboard',
-        icon: <AiOutlineBarChart />,
+        icon: <AiFillHome />,
       },
       {
-        name: 'Pedidos',
-        icon: <AiOutlineShoppingCart />,
+        name: 'Produtos',
+        icon: <AiFillEdit />,
       },
       {
         name: 'Clientes',
@@ -34,5 +35,16 @@ export const links = [
         icon: <AiOutlineCalendar />,
       },
     ],
+  },
+];
+
+export const themeColors = [
+  {
+    name: 'blue-theme',
+    color: '#1A97F5',
+  },
+  {
+    name: 'red-theme',
+    color: '#FF5C8E',
   },
 ];
