@@ -5,6 +5,8 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 
 import profile from '../assets/avatar.png';
 import { useStateContext} from '../contexts/ContextProvider';
+import Notification from './Notification';
+import UserProfile from './UserProfile';
 
 
 const NavButton = ({title, customFunc, icon, color, dotColor}) => (
@@ -23,7 +25,7 @@ const NavButton = ({title, customFunc, icon, color, dotColor}) => (
 )
 
 const Navbar = () => {
-    const { setActiveMenu, handleClick,
+    const { setActiveMenu, handleClick, isClicked,
         screenSize, setScreenSize } = useStateContext();
 
     useEffect(() => {
@@ -73,6 +75,10 @@ const Navbar = () => {
         className="text-gray-400 text-14"
         />
     </div>
+
+    {isClicked.notification && <Notification />}
+    {isClicked.userProfile && <UserProfile />}
+
     </div>
     </div>
   )
