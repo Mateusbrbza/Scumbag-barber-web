@@ -6,7 +6,6 @@ import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 //import moment from 'moment';
 import '../../index.css';
-import DatePick from './DatePick';
 import "react-datepicker/dist/react-datepicker.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import './CalendarView.css';
@@ -45,7 +44,6 @@ function CalendarView() {
     <div className='app'>
       <div className='calendar-container'>
       </div>
-          <DatePick />
           <Calendar
           selectable
           onChange={setDate}
