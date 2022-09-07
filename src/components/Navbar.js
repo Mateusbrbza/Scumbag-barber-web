@@ -65,11 +65,8 @@ const Navbar = () => {
         alt="user-profile"
         />
         <p>
-            <span className="text-gray-400 text-14">
-                Olá,
-            </span> {' '}
             <span className="text-gray-400 font-bold ml-1 text-14">
-                Miguel.
+                Menu
             </span>
         </p>
         <MdKeyboardArrowDown
